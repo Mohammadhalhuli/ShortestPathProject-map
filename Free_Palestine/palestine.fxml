@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" prefHeight="664.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Free_Palestine.SceneController">
+  <children>
+    <AnchorPane fx:id="anchorpane" maxHeight="-1.0" maxWidth="-1.0" onMouseClicked="#anchroPaneAonAction" prefHeight="664.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="sourceText" layoutX="388.0" layoutY="114.0" prefHeight="25.0" prefWidth="116.0" />
+            <TextField fx:id="destinationText" layoutX="388.0" layoutY="158.0" prefHeight="25.0" prefWidth="116.0" />
+            <Label layoutX="522.0" layoutY="111.0" prefHeight="30.0" prefWidth="35.0" text="Start">
+               <font>
+                  <Font name="Cambria Bold Italic" size="14.0" />
+               </font></Label>
+            <Label layoutX="519.0" layoutY="155.0" prefHeight="30.0" prefWidth="41.0" text="End" textAlignment="RIGHT">
+               <font>
+                  <Font name="Cambria Bold Italic" size="15.0" />
+               </font></Label>
+            <Label layoutX="372.0" layoutY="219.0" prefHeight="30.0" prefWidth="108.0" text="Shortest Path " textFill="#286fa1">
+               <font>
+                  <Font name="Cambria Bold Italic" size="15.0" />
+               </font></Label>
+            <Label fx:id="ShortstPt" layoutX="383.0" layoutY="490.0" prefHeight="30.0" prefWidth="109.0" text="Distance" textFill="#3341a1">
+               <font>
+                  <Font name="Cambria Bold Italic" size="24.0" />
+               </font></Label>
+            <TextField fx:id="totalCostText" layoutX="376.0" layoutY="528.0" prefHeight="25.0" prefWidth="108.0" />
+            <ImageView fitHeight="658.0" fitWidth="374.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../150px-Palestine-Israel_Locator.svg.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="CButton" layoutX="14.0" layoutY="615.0" mnemonicParsing="false" onAction="#Clear_Button" text="Restart">
+               <font>
+                  <Font name="Cambria Bold Italic" size="14.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.6238095238095238" startY="0.819047619047619">
+                     <stops>
+                        <Stop color="#0c7aed" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <Line endX="-83.94488525390625" endY="619.0" layoutX="357.0" layoutY="43.0" startX="-83.94488525390625" startY="-39.0" />
+            <Line endX="58.55511474609375" endY="0.5" layoutX="215.0" layoutY="662.0" startX="-215.0" />
+            <Line endX="187.0" layoutX="413.0" layoutY="88.0" startX="-139.44488525390625" />
+            <Line endX="198.0" endY="7.0" layoutX="400.0" layoutY="182.0" startX="-126.44488525390625" startY="7.0" />
+            <Line endX="112.0" layoutX="414.0" layoutY="257.0" startX="-88.0" />
+            <Line endX="18.0" endY="111.0" layoutX="508.0" layoutY="346.0" startX="18.0" startY="-89.0" />
+            <Line endX="-2.70709228515625" endY="8.5" layoutX="330.0" layoutY="249.0" startX="-2.70709228515625" startY="206.0" />
+            <Line endX="112.0" endY="1.0" layoutX="414.0" layoutY="456.0" startX="-87.20709228515625" startY="-0.5" />
+            <Line endX="156.0" layoutX="446.0" layoutY="469.0" startX="-172.44488525390625" stroke="#1515a8" />
+            <Line endX="203.29290771484375" layoutX="397.0" layoutY="478.0" startX="-123.44488525390625" stroke="#1736b5" />
+            <Line endX="70.29290771484375" layoutX="414.0" layoutY="527.0" startX="-38.0" />
+            <Line endX="48.0" endY="-2.0" layoutX="436.0" layoutY="554.0" startX="-60.0" startY="-2.0" />
+            <Line endX="45.5" endY="28.5" layoutX="330.0" layoutY="524.0" startX="45.5" startY="3.5" />
+            <Line endX="-13.20709228515625" endY="-44.5" layoutX="498.0" layoutY="572.0" startX="-14.0" startY="-20.0" />
+            <Line endX="216.0" endY="1.5" layoutX="388.0" layoutY="661.0" startX="-115.44488525390625" startY="1.5" />
+            <Button fx:id="Run" layoutX="294.0" layoutY="125.0" mnemonicParsing="false" onAction="#Run_Button" text="Run">
+               <font>
+                  <Font name="Cambria Bold Italic" size="14.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.49444444444444446" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#0c7aed" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+            <TextArea fx:id="shortestPathText" layoutX="326.0" layoutY="256.0" prefHeight="200.0" prefWidth="200.0" />
+            <Label layoutX="350.0" layoutY="29.0" prefHeight="38.0" prefWidth="192.0" text="Palestine Map" textFill="#13869a">
+               <font>
+                  <Font name="Bernard MT Condensed" size="22.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </children>
+</VBox>
